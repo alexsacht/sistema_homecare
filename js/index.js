@@ -66,3 +66,40 @@ $(function() {
 		form.addClass('was-validated');
 	});
 });
+
+function loadPage(page) {
+    fetch(page)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('menu_direito').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar a página:', error));
+}
+
+function salvar() {
+    const form = document.getElementById('cadastroClienteForm');
+    const formData = new FormData(form);
+    
+    let data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    console.log('Dados do formulário:', data);
+   
+    alert('Dados salvos com sucesso!');
+}
+
+function limpar() {
+    document.getElementById('cadastroClienteForm').reset();
+}
+
+document.getElementById('toggleSwitch').addEventListener('change', function() {
+	const inputField = document.getElementById('ie');
+	inputField.disabled = !this.checked;
+});
