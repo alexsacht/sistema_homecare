@@ -99,7 +99,30 @@ function limpar() {
     document.getElementById('cadastroClienteForm').reset();
 }
 
-document.getElementById('toggleSwitch').addEventListener('change', function() {
+
+
+
+
+function toggleSubMenu(element) {
+    const subMenu = element.nextElementSibling;
+    const isActive = element.classList.contains('active');
+    document.querySelectorAll('.cadastro').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('.sub_menu_cadastro').forEach(item => item.style.display = 'none');
+
+    if (!isActive) {
+        element.classList.add('active');
+        subMenu.style.display = 'block';
+    }
+}
+
+function updateDropdownLabel(option) {
+	event.preventDefault(); // Prevenir comportamento padrão
+	document.getElementById('dropdownMenuChave').textContent = option;
+}
+
+document.getElementById('toggleSwitch').addEventListener('change', function teste() {
 	const inputField = document.getElementById('ie');
 	inputField.disabled = !this.checked;
 });
+
+
