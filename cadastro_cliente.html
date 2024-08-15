@@ -13,7 +13,6 @@
 <body>
     <div class="container-fluid">
         <div class="container mt-5">
-
             <form id="cadastroClienteForm">
                 <h1>Cadastro de Cliente</h1>
                 <div class="form-group">
@@ -22,7 +21,7 @@
                 </div>
 
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pessoa Fisica
                     </button>
@@ -121,12 +120,12 @@
                         <label for="tp_chave">Tipo de chave pix</label>
 
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuChave"
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuChave"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tipo de chave
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#" onclick="updateDropdownLabel('cpf')">cpf</a>
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#" onclick="updateDropdownLabel('CPF')">CPF</a>
                                 <a class="dropdown-item" href="#" onclick="updateDropdownLabel('Celular')">Celular</a>
                                 <a class="dropdown-item" href="#" onclick="updateDropdownLabel('E-mail')">E-mail</a>
                                 <a class="dropdown-item" href="#" onclick="updateDropdownLabel('Chave aleatória')">Chave aleatória</a>
@@ -146,9 +145,10 @@
                     <textarea class="form-control" id="observacao" name="observacao" rows="3"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
-                    <button type="button" class="btn btn-secondary" onclick="limpar()">Limpar</button>
+                <div class="form-row" >
+                    <button type="button" class="button" id="button" onclick="salvar()">Salvar</button>
+                    <button type="button" class="button" id="button" onclick="limpar()">Limpar</button>
+                </div>
                 </div>
             </form>
         </div>

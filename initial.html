@@ -12,18 +12,22 @@
 
 <body>
     <div class="grid-principal">
-        <div class="grid-menu" id="menu_esquerdo">
-            <div class="cadastro" onclick="toggleSubMenu(this)">Escala</div>
-            <div class="cadastro" onclick="toggleSubMenu(this)">Fechamento</div>
+        <div class="grid-menu collapsed" id="menu_esquerdo">
+            <div class="cadastro" onclick="loadPage('escala.html')">Escala</div>
+            <div class="cadastro" onclick="loadPage('fechamento.html')">Fechamento</div>
             <div class="cadastro" onclick="toggleSubMenu(this)">Cadastro</div>
             <div class="sub_menu_cadastro">
                 <div>
                     <a href="#" onclick="loadPage('menu_cliente.html')">Clientes</a>
                 </div>
-                <div onclick="loadPage('cadastro_colaboradores.html')">Colaboradores</div>
-                <div onclick="loadPage('cadastro_operadores_saude.html')">Operadores de saúde</div>
+                <div onclick="loadPage('menu_colaborador.html')">Colaboradores</div>
+                <div onclick="loadPage('menu_operador_saude.html')">Operadores de saúde</div>
             </div>
             <div class="cadastro" onclick="toggleSubMenu(this)">Configuração</div>
+            <div class="sub_menu_cadastro">
+                <div onclick="loadPage('conf_dados_empresa.html')">Dados da empresa</div>
+                <div onclick="loadPage('menu_usuario.html')">Usuários</div>
+            </div>
         </div>
         <div class="grid-menu" id="menu_direito">
             <div class="imagem">
